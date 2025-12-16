@@ -30,7 +30,7 @@ public class WepFormTest {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(1500));
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
-        driver.manage().window().maximize();
+
     }
 
     @Test
