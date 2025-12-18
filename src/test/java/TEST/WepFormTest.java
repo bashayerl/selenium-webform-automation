@@ -81,8 +81,10 @@ public class WepFormTest {
         WebElement range = driver.findElement(By.name("my-range"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].value=60", range);
-
+//index
         driver.findElement(By.xpath("/html/body/main/div/form/div/div[1]/div/a")).click();
+
+ //drag able Lists
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/ul/li[72]/a"))).click();
 
         Actions actions = new Actions(driver);
@@ -90,10 +92,8 @@ public class WepFormTest {
         WebElement S2 = driver.findElement(By.id("rightitem-3"));
        actions.dragAndDrop(s,S2).perform();
 
-
-
+ //  home page
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
-
 
 //submit
         driver.findElement(By.xpath("/html/body/main/div/form/div/div[2]/button")).click();
